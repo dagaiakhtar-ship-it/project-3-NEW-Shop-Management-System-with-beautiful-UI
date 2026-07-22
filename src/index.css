@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;550;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "./styles/tailwind.css";
+@import "./styles/print.css";
+
+/* System-wide global style overrides */
+:root {
+  /* Default fallbacks for custom properties */
+  --ui-scale: 1.0;
+  --font-size-base: 14px;
+  --card-padding: 1.25rem;
+  --card-gap: 1rem;
+  --border-radius: 0.75rem;
+  
+  --table-cell-py: 0.625rem;
+  --table-cell-px: 1rem;
+  --table-row-height: 3rem;
+  --table-font-size: 13px;
+  
+  --button-height: 2.5rem;
+  --button-font-size: 13px;
+  --button-px: 1rem;
+  
+  --input-height: 2.5rem;
+  --input-font-size: 13px;
+  --input-px: 1rem;
+
+  --sidebar-width-base: 4rem;
+  --sidebar-width-expanded: 16rem;
+}
+
+html {
+  font-size: var(--font-size-base, 14px) !important;
+  /* Apply display scale cleanly via CSS zoom property which is standard and extremely reliable */
+  zoom: var(--ui-scale, 1.0);
+}
+
+/* Sidebar Custom overrides mapping to CSS custom variables */
+.sidebar-container {
+  width: var(--sidebar-width-base, 4rem) !important;
+}
+
+.sidebar-aside {
+  width: var(--sidebar-width-base, 4rem) !important;
+}
+
+.sidebar-aside:hover {
+  width: var(--sidebar-width-expanded, 16rem) !important;
+}
+
+/* Apply card custom styling globally for rounded container panels */
+.bg-white.rounded-2xl,
+.bg-slate-950.rounded-2xl,
+.rounded-2xl.border {
+  padding: var(--card-padding, 1.25rem) !important;
+  gap: var(--card-gap, 1rem) !important;
+  border-radius: var(--border-radius, 0.75rem) !important;
+}
+
+/* Table density styling overrides */
+table th {
+  padding-top: var(--table-cell-py, 0.625rem) !important;
+  padding-bottom: var(--table-cell-py, 0.625rem) !important;
+  padding-left: var(--table-cell-px, 1rem) !important;
+  padding-right: var(--table-cell-px, 1rem) !important;
+  font-size: var(--table-font-size, 13px) !important;
+}
+
+table td {
+  padding-top: var(--table-cell-py, 0.625rem) !important;
+  padding-bottom: var(--table-cell-py, 0.625rem) !important;
+  padding-left: var(--table-cell-px, 1rem) !important;
+  padding-right: var(--table-cell-px, 1rem) !important;
+  font-size: var(--table-font-size, 13px) !important;
+}
+
+table tr {
+  min-height: var(--table-row-height, 3rem) !important;
+}
+
+/* Buttons sizing overrides (precisely target regular buttons and form action buttons) */
+button.font-semibold.rounded-lg:not(.p-2):not(.p-1\.5):not(.p-1):not(.h-auto):not(.h-fit) {
+  height: var(--button-height, 2.5rem) !important;
+  font-size: var(--button-font-size, 13px) !important;
+}
+
+/* Inputs, text fields, selects, dropdowns sizing overrides */
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+select {
+  height: var(--input-height, 2.5rem) !important;
+  font-size: var(--input-font-size, 13px) !important;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar customizations for tables and lists */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Subtle fade in keyframes for route transition panels */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ==========================================================================
+   RESPONSIVE POS DESIGN SYSTEM (Square/Shopify POS Style)
+   Specifically scoped under .pos-terminal-module to prevent global side-effects.
+   ========================================================================== */
+
+.pos-terminal-module {
+  /* Aligned exactly with requested typography values */
+  --pos-page-title: 24px;
+  --pos-section-title: 18px;
+  --pos-card-title: 16px;
+  --pos-normal-text: 14px;
+  --pos-label-text: 13px;
+  --pos-small-text: 12px;
+  --pos-btn-text: 14px;
+  --pos-input-text: 13px;
+  --pos-table-text: 13px;
+  --pos-price: 18px;
+  --pos-grand-total: 26px;
+  
+  --pos-search-bar-height: 48px; /* modern height 48px */
+  --pos-input-height: 44px;      /* modern input height 44px */
+  --pos-button-height: 48px;     /* modern button height 48px */
+  --pos-dropdown-height: 44px;   
+  
+  --pos-cart-row-height: 44px;   
+  
+  --pos-page-padding: 24px;      /* exactly 24px */
+  --pos-card-padding: 20px;      /* exactly 20px */
+  --pos-gap-cards: 16px;         /* exactly 16px */
+  --pos-gap-sections: 24px;      /* exactly 24px */
+  --pos-gap-form: 16px;          /* exactly 16px */
+  --pos-gap-buttons: 12px;       /* exactly 12px */
+  --pos-table-cell-padding: 14px;/* exactly 14px */
+  
+  --pos-radius-card: 16px;        /* 16px, Rounded 2XL */
+  --pos-radius-button: 12px;    /* 12px, Rounded XL */
+  --pos-radius-input: 12px;     /* 12px, Rounded XL */
+  --pos-radius-dialog: 16px;      /* 16px, Rounded 2XL */
+
+  --pos-icon-normal: 18px;         /* standard icon size 18px */
+  --pos-icon-important: 20px;      /* 20px */
+  --pos-icon-primary-action: 24px; /* 24px */
+
+  /* Standard Light Colors */
+  --color-primary: #2563EB;
+  --color-primary-hover: #1d4ed8;
+  --color-app-bg: #F5F7FA;
+  --color-app-card: #ffffff;
+  --color-app-border: #E5E7EB;
+  --color-app-text-main: #111827;
+  --color-app-text-muted: #6B7280;
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --color-info: #0EA5E9;
+}
+
+/* Responsive Scaling for Layout Gaps and Padding values */
+@media (max-width: 1440px) {
+  .pos-terminal-module {
+    --pos-page-padding: 20px;
+    --pos-gap-sections: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .pos-terminal-module {
+    --pos-page-padding: 16px;
+    --pos-gap-sections: 16px;
+    --pos-card-padding: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .pos-terminal-module {
+    --pos-page-padding: 12px;
+    --pos-gap-sections: 12px;
+    --pos-card-padding: 12px;
+    --pos-gap-cards: 12px;
+  }
+}
+
+/* Dark mode overrides (automatic system preference AND explicit toggle support) */
+@media (prefers-color-scheme: dark) {
+  .pos-terminal-module {
+    --color-app-bg: #090d16;
+    --color-app-card: #121824;
+    --color-app-border: #1f2937;
+    --color-app-text-main: #f9fafb;
+    --color-app-text-muted: #9ca3af;
+    --color-primary: #3b82f6;
+    --color-primary-hover: #2563eb;
+  }
+}
+
+.dark .pos-terminal-module {
+  --color-app-bg: #090d16;
+  --color-app-card: #121824;
+  --color-app-border: #1f2937;
+  --color-app-text-main: #f9fafb;
+  --color-app-text-muted: #9ca3af;
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+}
+
+/* Custom utility overrides inside POS terminal to ensure uniform font sizes, heights, padding, and gaps */
+.pos-terminal-module .rounded-3xl {
+  border-radius: var(--pos-radius-card) !important;
+}
+.pos-terminal-module .rounded-2xl {
+  border-radius: var(--pos-radius-button) !important;
+}
+.pos-terminal-module .rounded-xl {
+  border-radius: var(--pos-radius-button) !important;
+}
+.pos-terminal-module .p-6 {
+  padding: var(--pos-card-padding) !important;
+}
+.pos-terminal-module .p-5 {
+  padding: var(--pos-card-padding) !important;
+}
+.pos-terminal-module .p-4 {
+  padding: var(--pos-card-padding) !important;
+}
+.pos-terminal-module .p-4\.5 {
+  padding: var(--pos-card-padding) !important;
+}
+.pos-terminal-module .px-5 {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+.pos-terminal-module .py-2\.5 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+.pos-terminal-module .gap-6 {
+  gap: var(--pos-gap-cards) !important;
+}
+.pos-terminal-module .gap-5 {
+  gap: var(--pos-gap-cards) !important;
+}
+.pos-terminal-module .gap-4\.5 {
+  gap: var(--pos-gap-cards) !important;
+}
+.pos-terminal-module .h-\[54px\] {
+  height: var(--pos-search-bar-height) !important;
+}
+.pos-terminal-module .h-\[50px\] {
+  height: var(--pos-input-height) !important;
+}
+.pos-terminal-module .h-\[48px\] {
+  height: var(--pos-button-height) !important;
+}
+/* Standard text elements baseline font size */
+.pos-terminal-module p,
+.pos-terminal-module span,
+.pos-terminal-module label,
+.pos-terminal-module select,
+.pos-terminal-module input,
+.pos-terminal-module button,
+.pos-terminal-module textarea,
+.pos-terminal-module h4,
+.pos-terminal-module h5 {
+  font-size: var(--pos-normal-text);
+}
+
+/* Page title typography style (24px) */
+.pos-terminal-module h1,
+.pos-terminal-module .pos-page-title {
+  font-size: var(--pos-page-title) !important;
+}
+
+/* Section title typography style (18px) */
+.pos-terminal-module h2,
+.pos-terminal-module h3,
+.pos-terminal-module .pos-section-title {
+  font-size: var(--pos-section-title) !important;
+}
+
+/* Table elements and cell typography style (13px) */
+.pos-terminal-module td,
+.pos-terminal-module th,
+.pos-terminal-module .pos-table-text,
+.pos-terminal-module [class*="pos-table-text"] {
+  font-size: var(--pos-table-text) !important;
+}
+
+/* Smaller label and meta text style (13px) */
+.pos-terminal-module .pos-small-text,
+.pos-terminal-module .text-xs,
+.pos-terminal-module .text-\[11px\],
+.pos-terminal-module .text-\[12px\],
+.pos-terminal-module .text-\[13px\] {
+  font-size: var(--pos-small-text) !important;
+}
+
+/* Price elements typography style (16px) */
+.pos-terminal-module .pos-price {
+  font-size: var(--pos-price) !important;
+}
+
+/* Grand total accent display typography style (24px) */
+.pos-terminal-module .pos-grand-total {
+  font-size: var(--pos-grand-total) !important;
+}
+
+/* ==========================================================================
+   CSS Mappings for Responsive Sizing Classes
+   ========================================================================== */
+
+.pos-terminal-module .pos-page-title {
+  font-size: var(--pos-page-title) !important;
+}
+.pos-terminal-module .pos-section-title {
+  font-size: var(--pos-section-title) !important;
+}
+.pos-terminal-module .pos-normal-text {
+  font-size: var(--pos-normal-text) !important;
+}
+.pos-terminal-module .pos-small-text {
+  font-size: var(--pos-small-text) !important;
+}
+.pos-terminal-module .pos-btn-text {
+  font-size: var(--pos-btn-text) !important;
+}
+.pos-terminal-module .pos-input-text {
+  font-size: var(--pos-input-text) !important;
+}
+.pos-terminal-module .pos-table-text,
+.pos-terminal-module .pos-table-text td,
+.pos-terminal-module .pos-table-text th {
+  font-size: var(--pos-table-text) !important;
+}
+.pos-terminal-module .pos-price {
+  font-size: var(--pos-price) !important;
+}
+.pos-terminal-module .pos-grand-total {
+  font-size: var(--pos-grand-total) !important;
+}
+
+/* Scoped Component Sizing */
+.pos-terminal-module .pos-search-bar {
+  height: var(--pos-search-bar-height) !important;
+}
+
+/* Regular inputs and select elements */
+.pos-terminal-module .pos-input,
+.pos-terminal-module input[type="text"].pos-input,
+.pos-terminal-module input[type="number"].pos-input,
+.pos-terminal-module select.pos-input {
+  height: var(--pos-input-height) !important;
+  font-size: var(--pos-input-text) !important;
+  border-radius: var(--pos-radius-input) !important;
+}
+
+/* Regular buttons */
+.pos-terminal-module .pos-btn,
+.pos-terminal-module button.pos-btn {
+  height: var(--pos-button-height) !important;
+  font-size: var(--pos-btn-text) !important;
+  border-radius: var(--pos-radius-button) !important;
+}
+
+/* Card overrides */
+.pos-terminal-module .pos-card {
+  padding: var(--pos-card-padding) !important;
+  border-radius: var(--pos-radius-card) !important;
+  gap: var(--pos-gap-cards) !important;
+}
+
+/* Layout Padding & Gaps */
+.pos-terminal-module.pos-container {
+  padding: var(--pos-page-padding) !important;
+  gap: var(--pos-gap-sections) !important;
+}
+.pos-terminal-module .pos-gap-cards {
+  gap: var(--pos-gap-cards) !important;
+}
+.pos-terminal-module .pos-gap-sections {
+  gap: var(--pos-gap-sections) !important;
+}
+.pos-terminal-module .pos-gap-form {
+  gap: var(--pos-gap-form) !important;
+}
+
+/* SVG Icon sizing overrides */
+.pos-terminal-module .pos-icon-normal {
+  width: var(--pos-icon-normal) !important;
+  height: var(--pos-icon-normal) !important;
+}
+.pos-terminal-module .pos-icon-important {
+  width: var(--pos-icon-important) !important;
+  height: var(--pos-icon-important) !important;
+}
+.pos-terminal-module .pos-icon-primary-action {
+  width: var(--pos-icon-primary-action) !important;
+  height: var(--pos-icon-primary-action) !important;
+}
+
+/* Cart row item heights */
+.pos-terminal-module .pos-cart-row {
+  min-height: var(--pos-cart-row-height) !important;
+}
+
+/* Dialog styling */
+.pos-dialog,
+.pos-terminal-module [role="dialog"],
+.pos-terminal-module .modal-container {
+  border-radius: var(--pos-radius-dialog) !important;
+}
+
+/* Grid Column overrides for Shopify POS Grid layout */
+.pos-product-grid {
+  display: grid !important;
+  gap: var(--pos-gap-cards, 12px) !important;
+}
+
+/* Small Phone: 2 columns */
+@media (max-width: 360px) {
+  .pos-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Medium Phone: 2 columns */
+@media (min-width: 361px) and (max-width: 420px) {
+  .pos-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Large Phone: 2-3 columns */
+@media (min-width: 421px) and (max-width: 600px) {
+  .pos-product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Tablet: 3-4 columns */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .pos-product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Laptop: 4-5 columns */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .pos-product-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Desktop: 5-6 columns */
+@media (min-width: 1367px) {
+  .pos-product-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Unified Transaction Panel Specific Font Size Reductions */
+#unified-transaction-panel {
+  --pos-page-title: 1.05rem !important;
+  --pos-section-title: 10px !important;
+  --pos-normal-text: 10.5px !important;
+  --pos-small-text: 9px !important;
+  --pos-btn-text: 10.5px !important;
+  --pos-input-text: 10.5px !important;
+  --pos-table-text: 10px !important;
+  --pos-price: 10.5px !important;
+  --pos-grand-total: 18px !important;
+}
+
+#unified-transaction-panel .text-[16px] {
+  font-size: 14px !important;
+}
+#unified-transaction-panel .text-[15.5px] {
+  font-size: 13.5px !important;
+}
+#unified-transaction-panel .text-[12.5px] {
+  font-size: 11px !important;
+}
+
+/* ==========================================================================
+   DUAL-THEME (LIGHT & DARK MODE) RETAIL THEME IMPLEMENTATION
+   Uses native CSS custom properties for instant, flawless adaptive styling.
+   ========================================================================== */
+
+/* Scoped variables mapped to the terminal layout */
+.pos-terminal-module {
+  background-color: var(--color-app-bg) !important;
+  color: var(--color-app-text-main) !important;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Cards & Modals background */
+.pos-terminal-module .bg-white,
+.pos-terminal-module .bg-white\/90,
+.pos-terminal-module .bg-white\/95 {
+  background-color: var(--color-app-card) !important;
+}
+
+.pos-terminal-module .bg-\[\#F5F7FA\],
+.pos-terminal-module .bg-gray-50,
+.pos-terminal-module .bg-slate-50,
+.pos-terminal-module .bg-slate-55,
+.pos-terminal-module .bg-gray-100\/50,
+.pos-terminal-module .bg-gray-50\/50 {
+  background-color: var(--color-app-bg) !important;
+}
+
+/* Borders and dividers */
+.pos-terminal-module .border,
+.pos-terminal-module .border-t,
+.pos-terminal-module .border-b,
+.pos-terminal-module .border-l,
+.pos-terminal-module .border-r,
+.pos-terminal-module .border-\[\#E5E7EB\],
+.pos-terminal-module .border-gray-100,
+.pos-terminal-module .border-gray-200,
+.pos-terminal-module .border-\[\#F1F5F9\],
+.pos-terminal-module .border-t-\[\#F1F5F9\],
+.pos-terminal-module .divide-y > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--color-app-border) !important;
+}
+
+/* Text elements styling */
+.pos-terminal-module .text-\[\#111827\],
+.pos-terminal-module .text-gray-900,
+.pos-terminal-module .text-slate-900,
+.pos-terminal-module h1,
+.pos-terminal-module h2,
+.pos-terminal-module h3,
+.pos-terminal-module h4,
+.pos-terminal-module h5 {
+  color: var(--color-app-text-main) !important;
+}
+
+.pos-terminal-module .text-\[\#6B7280\],
+.pos-terminal-module .text-gray-500,
+.pos-terminal-module .text-slate-500,
+.pos-terminal-module .text-gray-400,
+.pos-terminal-module .text-\[\#94A3B8\],
+.pos-terminal-module .text-slate-450 {
+  color: var(--color-app-text-muted) !important;
+}
+
+/* Sub-card/element subtle backgrounds inside dark mode */
+.pos-terminal-module .bg-\[\#F8FAFC\],
+.pos-terminal-module .bg-\[\#F1F5F9\],
+.pos-terminal-module .bg-\[\#F5F7FA\]\/50,
+.pos-terminal-module .bg-slate-50\/50 {
+  background-color: var(--color-app-bg) !important;
+}
+
+/* Inputs, Select items and Textareas inside POS */
+.pos-terminal-module input,
+.pos-terminal-module select,
+.pos-terminal-module textarea,
+.pos-terminal-module .pos-input,
+.pos-terminal-module select.pos-input {
+  background-color: var(--color-app-bg) !important;
+  color: var(--color-app-text-main) !important;
+  border-color: var(--color-app-border) !important;
+  transition: all 0.2s ease;
+}
+
+.pos-terminal-module input:focus,
+.pos-terminal-module select:focus,
+.pos-terminal-module textarea:focus {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15) !important;
+}
+
+/* Primary color highlights overrides */
+.pos-terminal-module .text-\[\#2563EB\],
+.pos-terminal-module .text-primary-600 {
+  color: var(--color-primary) !important;
+}
+.pos-terminal-module .bg-\[\#2563EB\],
+.pos-terminal-module .bg-primary-600 {
+  background-color: var(--color-primary) !important;
+  color: #ffffff !important;
+}
+.pos-terminal-module .bg-\[\#2563EB\]:hover,
+.pos-terminal-module .bg-primary-600:hover {
+  background-color: var(--color-primary-hover) !important;
+}
+.pos-terminal-module .bg-\[\#2563EB\]\/10,
+.pos-terminal-module .bg-\[\#2563EB\]\/15 {
+  background-color: rgba(37, 99, 235, 0.12) !important;
+}
+.pos-terminal-module .border-\[\#2563EB\]\/20,
+.pos-terminal-module .border-\[\#2563EB\]\/10 {
+  border-color: rgba(37, 99, 235, 0.25) !important;
+}
+
+/* Standard Shadow Levels */
+.pos-terminal-module .shadow-sm,
+.pos-terminal-module .pos-card {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Hover Lift Effect & Micro-Scales */
+.pos-terminal-module .hover\:-translate-y-1:hover {
+  transform: translateY(-4px) scale(1.01) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Button & interactive click micro-scale feedback */
+.pos-terminal-module button:active,
+.pos-terminal-module .pos-btn:active,
+.pos-terminal-module \[role="button"\]:active {
+  transform: scale(0.98) !important;
+}
+
+/* Universal Dialog Modal Dual-Theme support */
+.modal-overlay,
+.dialog-backdrop,
+.fixed.inset-0 {
+  backdrop-filter: blur(4px);
+  background-color: rgba(9, 13, 22, 0.5) !important;
+}
+
+.pos-dialog,
+[role="dialog"] .bg-white,
+[role="dialog"] .modal-container {
+  background-color: var(--color-app-card) !important;
+  color: var(--color-app-text-main) !important;
+  border: 1px solid var(--color-app-border) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Standardized Scrollbar styling inside POS Terminal */
+.pos-terminal-module ::-webkit-scrollbar-thumb {
+  background-color: var(--color-app-border) !important;
+}
+.pos-terminal-module ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-app-text-muted) !important;
+}
+

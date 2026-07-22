@@ -1,0 +1,161 @@
+/* Dedicated styles for printing and paper layouts */
+
+@media print {
+  /* Hide all interactive screen elements */
+  nav,
+  aside,
+  header,
+  footer:not(.printable-footer),
+  button,
+  .no-print,
+  .sidebar,
+  .top-bar,
+  .toast,
+  .action-buttons,
+  .filter-panel,
+  .pagination-container,
+  #close-pdf-preview,
+  .fixed-action-btn,
+  .modal:not(.print-modal) {
+    display: none !important;
+  }
+
+  /* Reset body and page settings */
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Full width container for printed area */
+  .printable-area {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* Elegant high-contrast tables */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    page-break-inside: auto !important;
+  }
+
+  tr {
+    page-break-inside: avoid !important;
+    page-break-after: auto !important;
+  }
+
+  thead {
+    display: table-header-group !important; /* Repeats header on every page */
+  }
+
+  tfoot {
+    display: table-footer-group !important;
+  }
+
+  th, td {
+    border: 1px solid #cbd5e1 !important; /* standard light slate border */
+    padding: 6px 8px !important;
+    text-align: left !important;
+    font-size: 9pt !important;
+  }
+
+  th {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+    font-weight: 600 !important;
+  }
+
+  /* Page break controls */
+  .page-break-before {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+
+  .page-break-after {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  .page-break-inside-avoid {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Avoid cutting off text blocks */
+  p, h1, h2, h3, h4, h5, h6, li {
+    orphans: 3 !important;
+    widows: 3 !important;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* Browser print overrides for the Receipt Preview modal card */
+  #receipt-preview-dialog {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-height: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+
+  #receipt-preview-dialog button,
+  #receipt-preview-dialog .shrink-0,
+  #receipt-actions-toolbar,
+  .fixed-action-btn {
+    display: none !important;
+  }
+
+  #receipt-preview-dialog .overflow-y-auto {
+    overflow: visible !important;
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #receipt-preview-dialog .bg-white {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 80mm !important; /* thermal standard */
+  }
+}
+
+/* Screen style for Print Preview Container (resembles real paper sheets) */
+.paper-preview-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Specific thermal receipt styles on-screen vs print */
+.thermal-receipt-container {
+  font-family: 'JetBrains Mono', 'Fira Code', Courier, monospace !important;
+}
+
+.thermal-divider {
+  border-top: 1px dashed #64748b;
+  margin: 4px 0;
+}

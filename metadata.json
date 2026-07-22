@@ -1,0 +1,6 @@
+{
+  "name": "Shop Management System",
+  "description": "An ultra-speed offline-first cashier POS terminal with global hotkeys, high-fidelity receipt templates, and an automated transaction ledger.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
