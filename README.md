@@ -1,31 +1,54 @@
 <!-- =====================================================================
-     🎨  SHOP MANAGEMENT SYSTEM & POS TERMINAL — GitHub README
+     🎨  SHOP MANAGEMENT SYSTEM & POS TERMINAL — GitHub README (v2)
      ---------------------------------------------------------------------
-     📁 IMAGE SETUP (do this once after pushing):
-        1. Create a folder:  assets/
-        2. Add these files (screenshots of your app):
-           - assets/pos-terminal.png   ← the hero image you already have
-           - assets/dashboard.png
-           - assets/inventory.png
-           - assets/customers.png
-           - assets/cloud-sync.png
-           - assets/login.png
-        3. Replace  YOUR_USERNAME / YOUR_REPO  below with your real values.
-     All other graphics (badges, banner, icons, star chart) are live
-     services and need NO hosting.
+     ✅ ZERO-CONFIG: every image below loads from Shields.io / placehold.co
+        or is a native GitHub Mermaid diagram. Nothing to upload.
+
+     🖼️  TO USE YOUR REAL SCREENSHOTS LATER (optional, 30 sec each):
+        1. Create folder  assets/  and add your PNGs.
+        2. Find & replace the matching placehold.co URL with the asset path.
+
+        CARD                 ->  REPLACE ITS placehold.co URL WITH
+        ─────────────────────────────────────────────────────────────
+        Hero banner          ->  assets/pos-terminal.png
+        "POS Terminal" card  ->  assets/pos-terminal.png
+        "BI Dashboard" card  ->  assets/dashboard.png
+        "Inventory" card     ->  assets/inventory.png
+        "Customers" card     ->  assets/customers.png
+        "Cloud Sync" card    ->  assets/cloud-sync.png
+        "Secure Auth" card   ->  assets/login.png
 ===================================================================== -->
 
-<!-- ============================  HEADER BANNER  ============================ -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,50:3b82f6,100:1e3a8a&height=220&section=header&text=Shop%20Management%20%26%20POS&fontSize=70&fontAlignY=38&desc=Offline-First%20%C2%B7%20AI-Powered%20%C2%B7%20Blazing%20Fast&descAlignY=62&descSize=22&fontColor=ffffff&animation=fadeIn" width="100%" alt="header banner"/>
+# 🛒 Shop Management System & POS Terminal
 
-<!-- typing subtitle -->
-<a href="#"><img src="https://readme-typing-svg.demolab.com/?lines=Point+of+Sale+Terminal;Business+Intelligence+Suite;100%25+Offline-First;Powered+by+Gemini+AI&center=true&width=720&height=40&color=3B82F6&vCenter=true&size=22&pause=1000" alt="typing svg"/></a>
+### Offline‑First · AI‑Powered · Blazing Fast
+
+An ultra‑speed, **offline‑first** Point of Sale terminal and full **Business Intelligence** suite — built with **React 19**, **TypeScript**, **Tailwind CSS v4**, **Dexie.js (IndexedDB)** and **Google Gemini AI**.
+
+<!-- status row (Shields.io — always renders) -->
+![Status](https://img.shields.io/badge/Status-Production_Ready-22C55E?style=flat-square)
+![Offline](https://img.shields.io/badge/Offline--First-100%25-8B5CF6?style=flat-square)
+![AI](https://img.shields.io/badge/AI-Gemini_2.5_Flash-4285F4?style=flat-square&logo=googlegemini&logoColor=white)
+![License](https://img.shields.io/badge/License-Proprietary-111827?style=flat-square)
 
 </div>
 
-<!-- ============================  BADGE ROW  ============================ -->
+---
+
+<!-- ============================  HERO  ============================ -->
+<div align="center">
+
+<img src="https://placehold.co/1200x520/0F172A/38BDF8?text=POS+TERMINAL+%C2%B7+LIVE+CART+%C2%B7+MULTI-PAY+CHECKOUT&font=roboto" alt="POS Terminal hero" width="92%" />
+
+<sub>A tactile, keyboard‑driven cashier experience — live cart, multi‑payment checkout, instant product search. <i>(placeholder — swap with <code>assets/pos-terminal.png</code>)</i></sub>
+
+</div>
+
+---
+
+<!-- ======================  TECH BADGES  ====================== -->
 <div align="center">
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
@@ -33,29 +56,16 @@
 ![Vite](https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![Gemini](https://img.shields.io/badge/Google_Gemini-2.5_Flash-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white)
+![Node](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
 <br/>
 
-![IndexedDB](https://img.shields.io/badge/Offline--First-IndexedDB-8B5CF6?style=flat-square)
-![Zustand](https://img.shields.io/badge/State-Zustand-F59E0B?style=flat-square)
-![Dexie](https://img.shields.io/badge/DB-Dexie.js-EF4444?style=flat-square)
+![Zustand](https://img.shields.io/badge/State-Zustand-F59E0B?style=flat-square&logo=react&logoColor=white)
+![Dexie](https://img.shields.io/badge/DB-Dexie.js_/_IndexedDB-EF4444?style=flat-square)
 ![Recharts](https://img.shields.io/badge/Charts-Recharts-10B981?style=flat-square)
-![License](https://img.shields.io/badge/License-Proprietary-111827?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Production_Ready-22C55E?style=flat-square)
-
-</div>
-
----
-
-<!-- ============================  HERO SCREENSHOT  ============================ -->
-<div align="center">
-
-### 🖥️ The Terminal, Reimagined
-
-<img src="assets/pos-terminal.png" alt="POS Terminal Interface" width="90%" />
-
-<sub>A tactile, keyboard‑driven cashier experience with live cart, multi‑payment checkout, and instant product search.</sub>
+![jsPDF](https://img.shields.io/badge/Export-jsPDF_/_XLSX_/_CSV-7C3AED?style=flat-square)
+![Framer](https://img.shields.io/badge/Motion-Framer_Motion-EC4899?style=flat-square)
+![Router](https://img.shields.io/badge/Routing-React_Router_v7-CA4245?style=flat-square)
 
 </div>
 
@@ -63,9 +73,7 @@
 
 ## 📖 Overview
 
-> An **ultra‑speed, offline‑first** Point of Sale (POS) terminal and comprehensive **Business Intelligence (BI)** suite — engineered with **React 19**, **TypeScript**, **Tailwind CSS v4**, **Dexie.js (IndexedDB)**, and **Google Gemini AI**.
-
-Run an entire shop from a single browser tab. Sell, track inventory, manage credit, and generate AI‑driven financial reports — **even with the internet unplugged**. When you're back online, everything syncs seamlessly.
+> Run an entire shop from a single browser tab. Sell, track inventory, manage credit, and generate **AI‑written financial reports** — *even with the internet unplugged.* When you reconnect, everything syncs.
 
 <table>
 <tr>
@@ -99,7 +107,6 @@ Run an entire shop from a single browser tab. Sell, track inventory, manage cred
 - [🖼️ Screenshots](#-screenshots)
 - [✨ Core Features](#-core-features)
 - [🏗️ Architecture](#-architecture)
-- [🛠️ Tech Stack](#-tech-stack)
 - [⚡ Data Flow & Persistence](#-data-flow--persistence)
 - [📁 Project Structure](#-project-structure)
 - [🚀 Getting Started](#-getting-started)
@@ -111,19 +118,21 @@ Run an entire shop from a single browser tab. Sell, track inventory, manage cred
 
 ## 🖼️ Screenshots
 
+> *Styled placeholders — replace each with your own PNG via the mapping at the top of this file.*
+
 <div align="center">
 <table>
 <tr>
-<td align="center" width="50%"><img src="assets/pos-terminal.png" alt="POS"/><br/><sub><b>🛒 POS Terminal</b></sub></td>
-<td align="center" width="50%"><img src="assets/dashboard.png" alt="Dashboard"/><br/><sub><b>📊 BI & AI Analytics</b></sub></td>
+<td align="center" width="50%"><img src="https://placehold.co/600x360/1E3A8A/FFFFFF?text=POS+TERMINAL&font=roboto" alt="POS"/><br/><sub><b>🛒 POS Terminal</b><br/>Grid · cart · multi‑pay</sub></td>
+<td align="center" width="50%"><img src="https://placehold.co/600x360/4338CA/FFFFFF?text=BI+%26+AI+ANALYTICS&font=roboto" alt="BI"/><br/><sub><b>📊 BI & AI Analytics</b><br/>KPIs · charts · Gemini</sub></td>
 </tr>
 <tr>
-<td align="center"><img src="assets/inventory.png" alt="Inventory"/><br/><sub><b>📦 Inventory & Catalog</b></sub></td>
-<td align="center"><img src="assets/customers.png" alt="Customers"/><br/><sub><b>👥 Customers & Credit</b></sub></td>
+<td align="center"><img src="https://placehold.co/600x360/0E7490/FFFFFF?text=INVENTORY+%26+CATALOG&font=roboto" alt="Inventory"/><br/><sub><b>📦 Inventory & Catalog</b><br/>SKU · stock · reorder</sub></td>
+<td align="center"><img src="https://placehold.co/600x360/047857/FFFFFF?text=CUSTOMERS+%26+CREDIT&font=roboto" alt="Customers"/><br/><sub><b>👥 Customers & Credit</b><br/>ledger · limits · loyalty</sub></td>
 </tr>
 <tr>
-<td align="center"><img src="assets/cloud-sync.png" alt="Sync"/><br/><sub><b>☁️ Cloud Sync & Backup</b></sub></td>
-<td align="center"><img src="assets/login.png" alt="Login"/><br/><sub><b>🔐 Role‑Based Auth</b></sub></td>
+<td align="center"><img src="https://placehold.co/600x360/B45309/FFFFFF?text=CLOUD+SYNC+%26+BACKUP&font=roboto" alt="Sync"/><br/><sub><b>☁️ Cloud Sync & Backup</b><br/>queue · export · restore</sub></td>
+<td align="center"><img src="https://placehold.co/600x360/BE123C/FFFFFF?text=ROLE-BASED+AUTH&font=roboto" alt="Auth"/><br/><sub><b>🔐 Role‑Based Auth</b><br/>login · guards · roles</sub></td>
 </tr>
 </table>
 </div>
@@ -137,7 +146,7 @@ Run an entire shop from a single browser tab. Sell, track inventory, manage cred
 <td width="33%" valign="top">
 
 ### 🛒 POS Cashier
-Live product grid, instant search, barcode scanner, favorites, dynamic tax & discount engine, and multi‑payment settlement (Cash · Card · Wallet · Credit).
+Live product grid, instant search, barcode scanner, favorites, dynamic tax & discount engine, multi‑payment settlement (Cash · Card · Wallet · Credit).
 
 </td>
 <td width="33%" valign="top">
@@ -149,7 +158,7 @@ Ask your business questions in plain English. Gemini 2.5 Flash returns insights,
 <td width="33%" valign="top">
 
 ### 📦 Inventory
-SKU & barcode generation, cost vs. sell price, reorder thresholds, low‑stock warnings, and atomic stock deduction on checkout.
+SKU & barcode generation, cost vs. sell price, reorder thresholds, low‑stock warnings, atomic stock deduction on checkout.
 
 </td>
 </tr>
@@ -157,19 +166,19 @@ SKU & barcode generation, cost vs. sell price, reorder thresholds, low‑stock w
 <td valign="top">
 
 ### 👥 Customers & Credit
-Lifetime spend tracking, loyalty history, full credit ledger, payment logs, and **automatic credit‑limit enforcement**.
+Lifetime spend tracking, loyalty history, full credit ledger, payment logs, **automatic credit‑limit enforcement**.
 
 </td>
 <td valign="top">
 
 ### 🚚 Suppliers & Purchases
-Supplier profiles, purchase orders, inventory intake, and accounts‑payable records — all linked to stock movements.
+Supplier profiles, purchase orders, inventory intake, accounts‑payable records — all linked to stock movements.
 
 </td>
 <td valign="top">
 
 ### 💰 Expenses & ☁️ Sync
-Categorized & recurring expenses with attachments. Offline queue, JSON/CSV backup, restore wizard, and integrity checks.
+Categorized & recurring expenses with attachments. Offline queue, JSON/CSV backup, restore wizard, integrity checks.
 
 </td>
 </tr>
@@ -179,7 +188,7 @@ Categorized & recurring expenses with attachments. Offline queue, JSON/CSV backu
 
 ## 🏗️ Architecture
 
-A **hybrid, client‑centric, offline‑first** architecture. The browser owns the data; the Express server exists only to serve files, proxy AI calls, and keep secrets safe.
+A **hybrid, client‑centric, offline‑first** design. The browser owns the data; the Express server only serves files, proxies AI calls, and guards secrets.
 
 ```mermaid
 flowchart TB
@@ -212,50 +221,6 @@ flowchart TB
     class Gemini ai;
 ```
 
-<details>
-<summary><b>📜 Original ASCII diagram (text version)</b></summary>
-
-```text
-              +-------------------------------------------------------+
-               |                      BROWSER CLIENT                   |
-               |   +-----------------------------------------------+   |
-               |   |            React 19 + TypeScript UI           |   |
-               |   +-----------------------+-----------------------+   |
-               |         Zustand Stores & Custom React Hooks           |
-               |            +--------------+--------------+            |
-               |            v                             v            |
-               |   +-----------------+           +-----------------+   |
-               |   |  Dexie.js (IDB) |           |  Sync / Backup  |   |
-               |   +-----------------+           +-----------------+   |
-               +---------------------------+---------------------------+
-                                           |  HTTP / REST
-               +---------------------------v---------------------------+
-               |                  EXPRESS.JS BACKEND                   |
-               |    +------------------+       +-------------------+   |
-               |    |  /api/ai Routes  |       |  Health / Sync    |   |
-               |    +--------+---------+       +-------------------+   |
-               +-------------|-----------------------------------------+
-                             v   Google Gemini API (GEMINI_API_KEY)
-```
-</details>
-
----
-
-## 🛠️ Tech Stack
-
-<div align="center">
-<img src="https://skillicons.dev/icons?i=react,ts,vite,tailwind,nodejs,express,js,html,css,git,github,npm&theme=light" alt="skill icons"/>
-</div>
-
-| Layer | Technologies |
-|-------|--------------|
-| **🎨 Frontend** | React 19 · TypeScript · Vite 6 · Tailwind CSS v4 · Framer Motion · Lucide Icons · React Router v7 |
-| **🧠 State & Storage** | Zustand · Dexie.js (IndexedDB) · `dexie-react-hooks` live queries |
-| **📄 Export & Print** | jsPDF + autotable · PapaParse (CSV) · SheetJS (XLSX) · react‑to‑print (thermal templates) |
-| **⚙️ Backend** | Express.js · `tsx` (dev) · esbuild → `dist/server.cjs` (prod) |
-| **🤖 AI** | Google GenAI SDK (`@google/genai`) · `gemini-2.5-flash` |
-| **📊 Charts** | Recharts |
-
 ---
 
 ## ⚡ Data Flow & Persistence
@@ -283,9 +248,9 @@ sequenceDiagram
     S-->>UI: JSON answer
 ```
 
-- **Offline‑first:** Products, Sales, Customers, Expenses & Purchases live in IndexedDB — the app is **100 % functional** without internet.
+- **Offline‑first:** Products, Sales, Customers, Expenses & Purchases live in IndexedDB — **100 % functional** without internet.
 - **Reactive reads:** components subscribe via `useLiveQuery`.
-- **Atomic writes:** helpers (e.g. `salesHelper.ts`) deduct stock and update credit ledgers in a single transaction.
+- **Atomic writes:** helpers (e.g. `salesHelper.ts`) deduct stock and update credit ledgers in one transaction.
 - **Secure AI:** keys never touch the client — the browser calls `/api/ai/*`, the server injects `GEMINI_API_KEY`.
 
 ---
@@ -392,20 +357,6 @@ The POS terminal is built for **hands‑on‑keyboard** speed.
 
 ---
 
-## 🌟 Star History
-
-<div align="center">
-<a href="https://star-history.com/#YOUR_USERNAME/YOUR_REPO&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=YOUR_USERNAME/YOUR_REPO&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=YOUR_USERNAME/YOUR_REPO&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=YOUR_USERNAME/YOUR_REPO&type=Date" width="70%"/>
- </picture>
-</a>
-</div>
-
----
-
 ## 📄 License
 
 > This project is **proprietary** and built for enterprise shop management, cashier POS operations, and data analytics. **All rights reserved.**
@@ -416,8 +367,20 @@ The POS terminal is built for **hands‑on‑keyboard** speed.
 
 ### 💙 Built with caffeine, TypeScript & a love for offline‑first design
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,50:3b82f6,100:1e3a8a&height=120&section=footer&fontColor=ffffff" width="100%" alt="footer"/>
-
-Made with ❤️ &nbsp;•&nbsp; **Shop Management System & POS Terminal**
+**Shop Management System & POS Terminal**
 
 </div>
+
+<!-- =====================================================================
+     OPTIONAL: Star History chart.
+     NOT rendered by default (a placeholder repo would show a broken image).
+     When your repo is public, paste this block OUTSIDE the comment and
+     replace YOUR_USERNAME / YOUR_REPO:
+
+<a href="https://star-history.com/#YOUR_USERNAME/YOUR_REPO&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=YOUR_USERNAME/YOUR_REPO&type=Date&theme=dark" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=YOUR_USERNAME/YOUR_REPO&type=Date" width="70%"/>
+ </picture>
+</a>
+===================================================================== -->
