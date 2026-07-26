@@ -128,7 +128,32 @@ built with **React 19 · TypeScript · Tailwind CSS v4 · Dexie.js (IndexedDB) �
 <table>
 <tr>
 <td align="center" width="50%"><img src="https://placehold.co/600x360/1E3A8A/FFFFFF?text=POS+TERMINAL&font=roboto" alt="POS"/><br/><sub><b>🛒 POS Terminal</b><br/>Grid · cart · multi‑pay</sub></td>
-<td align="center" width="50%"><img src="https://placehold.co/600x360/4338CA/FFFFFF?text=BI+%26+AI+ANALYTICS&font=roboto" alt="BI"/><br/><sub><b>📊 BI & AI Analytics</b><br/>KPIs · charts · Gemini</sub></td>
+     
+<td align="center" width="50%">
+     <img width="960" height="540" alt="55" src="https://github.com/user-attachments/assets/60bc6e22-3e99-4f9f-b7e5-26aa3ea2341e" />
+     <br>
+<img width="960" height="540" alt="66" src="https://github.com/user-attachments/assets/53fd2667-ddb5-4b46-aa16-e73fff5aff8d" />
+<br>
+<img width="960" height="540" alt="77" src="https://github.com/user-attachments/assets/689e7c62-4b36-469a-8689-3d5894b18a52" />
+<br>
+<img width="960" height="540" alt="88" src="https://github.com/user-attachments/assets/f32126e4-cf3f-4165-9bdd-5a6801e2564f" />
+<br>
+<img width="960" height="540" alt="99" src="https://github.com/user-attachments/assets/db4f9228-9cf7-4091-a724-6dcf4ecae84b" />
+<br>
+<img width="960" height="540" alt="10" src="https://github.com/user-attachments/assets/1d7d6e60-7097-4508-9bf4-e089a1e7db6b" />
+<br>
+<img width="960" height="540" alt="12" src="https://github.com/user-attachments/assets/46458387-8bcc-425a-9d23-c8f33e8cec0d" />
+<br>
+<img width="960" height="540" alt="13" src="https://github.com/user-attachments/assets/5b21fbfe-b011-4450-8d80-1baa95bb54fe" />
+<br>
+<img width="960" height="540" alt="14" src="https://github.com/user-attachments/assets/bc9cb5df-91d0-4b8e-b1cb-1b7cb8c0d743" />
+
+
+
+
+
+     
+     <br/><sub><b>📊 BI & AI Analytics</b><br/>KPIs · charts · Gemini</sub></td>
 </tr>
 <tr>
 <td align="center"><img src="https://placehold.co/600x360/0E7490/FFFFFF?text=INVENTORY+%26+CATALOG&font=roboto" alt="Inventory"/><br/><sub><b>📦 Inventory & Catalog</b><br/>SKU · stock · reorder</sub></td>
