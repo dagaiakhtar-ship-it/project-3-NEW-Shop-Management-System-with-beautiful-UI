@@ -148,7 +148,13 @@ built with **React 19 · TypeScript · Tailwind CSS v4 · Dexie.js (IndexedDB) �
 <br>
 <img width="960" height="540" alt="14" src="https://github.com/user-attachments/assets/bc9cb5df-91d0-4b8e-b1cb-1b7cb8c0d743" />
 
+<br>
+<img width="960" height="540" alt="ai1" src="https://github.com/user-attachments/assets/80be6978-2b6d-4633-b673-0d477ed5cc25" />
 
+<br>
+<img width="960" height="540" alt="ai2" src="https://github.com/user-attachments/assets/e4a01b1a-b82a-46e9-be8e-1b6f94f24403" />
+<br>
+[Uploading AI_Business_Intelligence_Report.pdf…]()
 
 
 
@@ -212,6 +218,7 @@ Live product grid, instant search, barcode scanner, favorites, dynamic tax & dis
 
 **📊 BI & AI Analytics**
 Ask business questions in plain English. Gemini 2.5 Flash returns insights, stock alerts, projections & **auto‑generated PDF reports**.
+
 
 </td>
 <td width="33%" valign="top">
