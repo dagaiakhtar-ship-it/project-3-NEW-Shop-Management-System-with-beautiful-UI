@@ -20,7 +20,8 @@
 
 <div align="center">
 
-<img src="https://placehold.co/1400x420/0F172A/38BDF8?text=SHOP+MANAGEMENT+SYSTEM+%26+POS+TERMINAL&font=montserrat" width="100%" alt="banner" />
+<img width="1376" height="768" alt="17851068537c4c" src="https://github.com/user-attachments/assets/a6e52ba8-4328-40bf-8c43-3fa2f403b9ba" />
+
 
 # 🛒 Shop Management System & POS Terminal
 
