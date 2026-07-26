@@ -191,7 +191,15 @@ built with **React 19 · TypeScript · Tailwind CSS v4 · Dexie.js (IndexedDB) �
      <br>
 
 <br/><sub><b>☁️ Cloud Sync & Backup</b><br/>queue · export · restore</sub></td>
-<td align="center"><img src="https://placehold.co/600x360/BE123C/FFFFFF?text=ROLE-BASED+AUTH&font=roboto" alt="Auth"/><br/><sub><b>🔐 Role‑Based Auth</b><br/>login · guards · roles</sub></td>
+<td align="center">
+     <img src="https://placehold.co/600x360/BE123C/FFFFFF?text=ROLE-BASED+AUTH&font=roboto" alt="Auth"/>
+    <br>
+     <img width="960" height="540" alt="s1" src="https://github.com/user-attachments/assets/30fa8985-4d18-44bc-82bf-3f234f0f33b8" />
+ <br>
+     <img width="960" height="540" alt="s2" src="https://github.com/user-attachments/assets/f47e7fa8-304b-4ead-b463-1f4bca370e2a" />
+
+<br>
+<br/><sub><b>🔐 Role‑Based Auth</b><br/>login · guards · roles</sub></td>
 </tr>
 </table>
 </div>
