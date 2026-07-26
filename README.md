@@ -173,7 +173,18 @@ built with **React 19 · TypeScript · Tailwind CSS v4 · Dexie.js (IndexedDB) �
 <br/><sub><b>👥 Customers & Credit</b><br/>ledger · limits · loyalty</sub></td>
 </tr>
 <tr>
-<td align="center"><img src="https://placehold.co/600x360/B45309/FFFFFF?text=CLOUD+SYNC+%26+BACKUP&font=roboto" alt="Sync"/><br/><sub><b>☁️ Cloud Sync & Backup</b><br/>queue · export · restore</sub></td>
+     
+<td align="center">
+     <img src="https://placehold.co/600x360/B45309/FFFFFF?text=CLOUD+SYNC+%26+BACKUP&font=roboto" alt="Sync"/>
+     <br>
+     <img width="960" height="540" alt="c1" src="https://github.com/user-attachments/assets/dfe7ca47-9803-4854-97b7-2187d55c5046" />
+<br>
+     <img width="960" height="540" alt="c2" src="https://github.com/user-attachments/assets/7f3f86f4-1d68-4a10-9bdf-abee7b231ba4" />
+<br>
+<img width="960" height="540" alt="c3" src="https://github.com/user-attachments/assets/d0acf930-3bbd-44a0-8385-c6e76239c928" />
+     <br>
+
+<br/><sub><b>☁️ Cloud Sync & Backup</b><br/>queue · export · restore</sub></td>
 <td align="center"><img src="https://placehold.co/600x360/BE123C/FFFFFF?text=ROLE-BASED+AUTH&font=roboto" alt="Auth"/><br/><sub><b>🔐 Role‑Based Auth</b><br/>login · guards · roles</sub></td>
 </tr>
 </table>
