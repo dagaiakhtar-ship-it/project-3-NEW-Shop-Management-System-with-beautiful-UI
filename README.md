@@ -46,7 +46,7 @@ built with **React 19 · TypeScript · Tailwind CSS v4 · Dexie.js (IndexedDB) �
 
 > [!IMPORTANT]
 > ### 🔗 Live Application
-> **➡️ [https://shop-pos.vercel.app](https://shop-pos.vercel.app)** <!-- ⚠️ REPLACE_LIVE_URL -->
+> **➡️ (https://project-3-new-shop-management-syste.vercel.app/))** <!-- ⚠️ REPLACE_LIVE_URL -->
 >
 > 🔑 **Login →** Username `admin` · Password `admin123`
 > 📴 *Offline‑first: all data lives in your browser's IndexedDB and syncs when you reconnect.*
