@@ -153,11 +153,24 @@ built with **React 19 · TypeScript · Tailwind CSS v4 · Dexie.js (IndexedDB) �
 
 
      
-     <br/><sub><b>📊 BI & AI Analytics</b><br/>KPIs · charts · Gemini</sub></td>
+  <br/><sub><b>📊 BI & AI Analytics</b><br/>KPIs · charts · Gemini</sub></td>
 </tr>
 <tr>
 <td align="center"><img src="https://placehold.co/600x360/0E7490/FFFFFF?text=INVENTORY+%26+CATALOG&font=roboto" alt="Inventory"/><br/><sub><b>📦 Inventory & Catalog</b><br/>SKU · stock · reorder</sub></td>
-<td align="center"><img src="https://placehold.co/600x360/047857/FFFFFF?text=CUSTOMERS+%26+CREDIT&font=roboto" alt="Customers"/><br/><sub><b>👥 Customers & Credit</b><br/>ledger · limits · loyalty</sub></td>
+
+
+     
+<td align="center">
+     <img width="960" height="540" alt="55" src="https://github.com/user-attachments/assets/228f9e10-5ff9-4398-98f3-1bf78445d010" />
+     <br>
+     <img width="960" height="540" alt="66" src="https://github.com/user-attachments/assets/6b6c2458-ae4b-4031-9ac6-13ea3625efc7" />
+<br>
+<img width="960" height="540" alt="20" src="https://github.com/user-attachments/assets/6d6ce877-2393-4bf2-bf1b-500bc3859aa3" />
+<br>
+     <img width="960" height="540" alt="21" src="https://github.com/user-attachments/assets/b849c636-9d1a-4477-a7ed-50c0ed8d93f8" />
+<br>
+
+<br/><sub><b>👥 Customers & Credit</b><br/>ledger · limits · loyalty</sub></td>
 </tr>
 <tr>
 <td align="center"><img src="https://placehold.co/600x360/B45309/FFFFFF?text=CLOUD+SYNC+%26+BACKUP&font=roboto" alt="Sync"/><br/><sub><b>☁️ Cloud Sync & Backup</b><br/>queue · export · restore</sub></td>
